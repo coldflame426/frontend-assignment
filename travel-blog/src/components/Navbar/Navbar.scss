@@ -1,0 +1,38 @@
+@import "../../App.scss";
+
+.navbar__wrapper {
+  display: grid;
+  justify-content: space-between;
+  width: 100%;
+  grid-template-columns: auto auto;
+  padding: 10px 150px;
+  background-color: $primary-light;
+  color: $gray;
+
+  .navbar__logo {
+    .navbar__logo__main {
+      font-size: 30px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .navbar__logo__desc {
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+
+  .navbar__navitems {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+
+    .navbar__navitem {
+      padding: 0 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
