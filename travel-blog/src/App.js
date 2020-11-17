@@ -1,5 +1,3 @@
-import headshot from "./images/headshot.jpg";
-import heroBackground from "./images/hero-background.jpg";
 import { BrowserRouter } from "react-router-dom";
 
 import Routes from "./Routes";
