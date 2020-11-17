@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useHistory } from "react-router-dom";
 
 import "./Navbar.scss";
 
@@ -9,6 +10,8 @@ const menuItems = [
 ];
 
 const Navbar = () => {
+  const { pathname } = useHistory().location;
+
   return (
     <div className="navbar__wrapper">
       <div className="navbar__logo">
@@ -18,9 +21,15 @@ const Navbar = () => {
 
       <div className="navbar__navitems">
         {menuItems.map((menuItem) => (
-          <div key={menuItem.id} className="navbar__navitem">
+          <Link
+            key={menuItem.id}
+            to={menuItem.to}
+            className={`navbar__navitem ${
+              pathname === menuItem.to ? "navbar__navitem--active" : ""
+            }`}
+          >
             {menuItem.name}
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -28,10 +28,16 @@
     align-items: center;
 
     .navbar__navitem {
-      padding: 0 15px;
+      color: $gray;
+      padding: 6px 10px;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      min-width: 75px;
 
-      &:hover {
-        cursor: pointer;
+      &.navbar__navitem--active {
+        color: $primary-light;
+        background-color: $primary;
       }
     }
   }
