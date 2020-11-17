@@ -1,0 +1,21 @@
+@import "App.scss";
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary;
+  color: $primary-light;
+  padding: 15px 150px;
+  margin-top: auto;
+  font-size: 14px;
+
+  .footer__navitems {
+    span {
+      margin-right: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
