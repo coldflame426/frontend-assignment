@@ -4,11 +4,23 @@
   display: grid;
   grid-template-columns: 200px auto;
   padding: 20px 150px;
-  grid-gap: 30px;
+  grid-gap: 20px;
+
+  @media only screen and (max-width: $medium-breakpoint) {
+    grid-template-columns: 175px auto;
+    padding: 20px 60px;
+  }
+
+  @media only screen and (max-width: $small-breakpoint) {
+    grid-template-columns: auto;
+    padding: 20px 40px;
+  }
 
   .poster__avatar {
     width: 100%;
+    max-width: 250px;
     border-radius: 100%;
+    margin: 0 auto;
   }
 
   .blog__content {
@@ -17,6 +29,7 @@
     }
 
     p {
+      font-size: 15px;
       color: $gray;
     }
   }

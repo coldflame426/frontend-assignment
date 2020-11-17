@@ -7,15 +7,29 @@
   color: $primary-light;
   padding: 15px 150px;
   margin-top: auto;
-  font-size: 14px;
+  font-size: 13px;
 
-  .footer__navitems {
-    span {
-      margin-right: 15px;
+  @media only screen and (max-width: $medium-breakpoint) {
+    padding: 20px 60px;
+  }
 
-      &:hover {
-        cursor: pointer;
-      }
+  @media only screen and (max-width: $small-breakpoint) {
+    flex-direction: column;
+  }
+
+  span {
+    margin-right: 10px;
+
+    &:first-of-type {
+      margin-right: auto;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: $small-breakpoint) {
+      margin: 10px auto;
     }
   }
 }
